@@ -26,7 +26,7 @@ You can view a live demo of the project [here](https://abdelhakim-sahifa.github.
 There's no specific installation required to run this project. Simply clone the repository or download the files.
 
 ```bash
-git clone https://github.com/hide-place/random-number.git
+git clone https://github.com/abdelhakim-sahifa/random-number.git
 ```
 
 ## Usage
