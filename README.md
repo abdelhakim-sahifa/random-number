@@ -41,7 +41,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) f
 
 ---
 
-Created by Abdelhakim Sahifa (@hide-place)
+Created by Abdelhakim Sahifa 
 
 
 ### Notes:
