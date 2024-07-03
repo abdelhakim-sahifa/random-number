@@ -13,7 +13,7 @@ This project generates random numbers on mouse hover over a label, with a transi
 
 ## Demo
 
-You can view a live demo of the project [here](https://hide-place.github.io/random-number/).
+You can view a live demo of the project [here](https://abdelhakim-sahifa.github.io/random-number/).
 
 ## Features
 
@@ -46,7 +46,7 @@ Created by Abdelhakim Sahifa
 
 ### Notes:
 
-- Replace `[here](https://hide-place.github.io/random-number/)` with the actual link to your live demo.
+- Replace `[here](https://abdelhakim-sahifa.github.io/random-number/)` with the actual link to your live demo.
 - Update the `(TODO)` sections with the actual functionality once implemented.
 - Adjust the sections or add more details as per your project's requirements.
 
