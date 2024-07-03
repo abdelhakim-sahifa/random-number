@@ -65,6 +65,12 @@
 }
 
 
+#copyNotification{
+   display: none;
+    
+    font-size: 20px;
+}
+
 
 footer{
     display: flex;
