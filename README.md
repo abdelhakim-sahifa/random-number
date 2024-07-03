@@ -1,5 +1,6 @@
 
-# Random Number Generator
+![the random number!](https://i.ibb.co/L6DYJzw/image-removebg-preview-2.png)
+
 This project generates random numbers on mouse hover over a label, with a transition effect to showcase the number.
 
 ## Table of Contents
