@@ -18,6 +18,7 @@ async function generateRandomNumber() {
     label.classList.remove('red')
     label.classList.add('green');
     label.innerText = randomNumber;
+    copyToClipboard(randomNumber);
     await sleep(1000);
     label.style.fontSize = '50px'
     label.classList.remove('green')
@@ -27,11 +28,25 @@ async function generateRandomNumber() {
 label.addEventListener('mouseenter' , generateRandomNumber)
 
 
-//todo
-function copy(){
-    label.select();
-    label.setSelectionRange(0, 99999); // For mobile devices
 
-    // Copy the text to the clipboard
-    document.execCommand('copy');
+
+// Function to copy text to clipboard
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+        // Show notification
+        document.getElementById('copyNotification').style.display = 'inline';
+        // Hide notification after 2 seconds
+        setTimeout(function() {
+            document.getElementById('copyNotification').style.display = 'none';
+        }, 2000);
+    }, function(err) {
+        console.error('Failed to copy: ', err);
+    });
 }
+
+
+
+
+
+
+
