@@ -1,5 +1,9 @@
 
 const label = document.getElementById('lbl');
+const modeToggle = document.getElementById('mode-toggle');
+
+
+
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -46,7 +50,35 @@ function copyToClipboard(text) {
 
 
 
+var isdark = localStorage.getItem('isDark')
+
+if(isdark){
+    document.body.classList.add('dark-body');
+    modeToggle.classList.add('dark-mode-toggle');
+    modeToggle.classList.add('fa-sun');
+    label.style.border = 'solid 1px white';
+}
 
 
 
+
+
+modeToggle.addEventListener('click' , () => {
+    var backgroundColor = window.getComputedStyle(document.body).backgroundColor;
+    if(backgroundColor== 'rgb(255, 255, 255)'){
+        document.body.classList.add('dark-body');
+        modeToggle.classList.add('dark-mode-toggle');
+        modeToggle.classList.add('fa-sun');
+        label.style.border = 'solid 1px white';
+        localStorage.setItem('isDark', true);
+    }
+    else{
+        document.body.classList.remove('dark-body');
+        modeToggle.classList.remove('dark-mode-toggle');
+        modeToggle.classList.remove('fa-sun')
+        modeToggle.classList.add('fa-moon')
+        label.style.border = 'solid 1px black';
+        localStorage.removeItem('isDark');
+    }
+})
 

@@ -3,13 +3,53 @@
     margin: 0;
     padding: 0;
     font-family: "Honk", system-ui;
-   /* background-color: #121212;*/
+   
     
 }
 *::selection{
     background-color: black;
     color: white;
 }
+body{
+    background-color: #fff;
+    transition: background-color 0.5s, color 0.5s;
+
+}
+
+header{
+    margin: 5px;
+    position: fixed;
+    top: 0;
+
+}
+
+
+
+#mode-toggle{
+   margin: 10px;
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+ 
+
+}
+
+#mode-toggle:hover{
+    background-color: #ebe9e8;
+
+}
+
+
+
+
 
 .main{
 
@@ -91,3 +131,25 @@ footer label , a{
 a:hover{
     color: black;
 }
+
+
+
+/*dark mode*/
+
+.dark-body{
+    background-color: #121212;
+}
+
+.dark-mode-toggle{
+    color: white;
+}
+.dark-mode-toggle:hover{
+    background-color: #393939 !important;
+
+}
+
+.dark-label{
+    border: solid 1px white;
+}
+
+/*-------*/
