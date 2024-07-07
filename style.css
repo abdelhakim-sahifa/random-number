@@ -37,7 +37,7 @@ header{
     cursor: pointer;
     padding: 5px;
     position: fixed;
-    bottom: 0;
+    bottom: 10px;
  
 
 }
@@ -47,6 +47,46 @@ header{
 
 }
 
+
+.history::before{
+    content: 'history'; 
+    font-size: 20px;
+    border-right: solid 1px #e0a761;
+    padding-right: 10px;
+    
+}
+
+
+.history{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px black;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    padding: 15px;
+    transition: all .3s;
+}
+
+
+
+.history label{
+    font-size: 20px;
+    position: relative;
+    transition:  all .3s ;
+    border-radius: 10px;
+    
+}
+
+.history label:hover{
+    background-color: #0A84FF;
+    padding: 5px;
+     
+}
 
 
 
@@ -98,10 +138,10 @@ header{
 
 
 .red{
-    background-color: red;
+    background-color: #FF3B30FF;
 }
 .green{
-    background-color: green;
+    background-color: #34C759FF;
 }
 
 
@@ -129,7 +169,8 @@ footer label , a{
 }
 
 a:hover{
-    color: black;
+    color: #e0a761;
+
 }
 
 
