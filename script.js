@@ -143,7 +143,7 @@ function refreshHistory(listOfHistory){
 
 async function getFunFact(number){
 
-    var url = `http://numbersapi.com/${number}`;
+    var url = `//numbersapi.com/${number}`;
        fetch(url)
            .then(response => {
                if (!response.ok) {
