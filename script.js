@@ -143,8 +143,9 @@ function refreshHistory(listOfHistory){
 
 async function getFunFact(number){
 
-    var url = `//numbersapi.com/${number}`;
-       fetch(url)
+    var url = `http://numbersapi.com/${number}`;
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+       fetch(proxyUrl + url)
            .then(response => {
                if (!response.ok) {
                    throw new Error('Network response was not ok ' + response.statusText);
