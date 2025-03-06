@@ -140,32 +140,41 @@ function refreshHistory(listOfHistory){
 
 
 }
+const notAfactResponses = [
+    "is an unremarkable number.",
+    "is an uninteresting number.",
+    "is a boring number.",
+    "is a number for which we're missing a fact (submit one to numbersapi at google mail!)."
+];
 
-async function getFunFact(number){
+async function getFunFact(number) {
+    try {
+        let url = `http://numbersapi.com/${number}`;
+        let response = await fetch(url);
 
-    var url = `http://numbersapi.com/${number}`;
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-       fetch(proxyUrl + url)
-           .then(response => {
-               if (!response.ok) {
-                   throw new Error('Network response was not ok ' + response.statusText);
-               }
-               return response.text();
-           })
-           .then(data => {
-               
-               funFactLbl.style.display = 'flex'
-               funFactLbl.textContent = data;
-               var theFunFcat = data;
-                
-               
-               
-           })
-           .catch(error => {
-               console.error('There has been a problem with your fetch operation:', error);
-               funFactLbl.textContent = 'Error fetching the text.';
-           });
-   }  
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+
+        let text = await response.text();
+        
+        // Remove the number from the response using regex
+        let cleanedText = text.replace(/^\d+\s*/, "").trim();
+
+        if (notAfactResponses.includes(cleanedText)) {
+            funFactLbl.style.display = 'flex';
+
+            funFactLbl.textContent = `No fun fact available for ${number}. `;
+        } else {
+            funFactLbl.style.display = 'flex';
+            funFactLbl.textContent = text;
+        }
+    } catch (error) {
+        console.error('Error fetching the fact:', error);
+        funFactLbl.textContent = 'Error fetching the fact.';
+    }
+}
+
 
 function copyToClipboard(text) {
     function attemptCopy() {

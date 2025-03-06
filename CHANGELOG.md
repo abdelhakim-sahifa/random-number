@@ -11,3 +11,23 @@
 - **Added Fun Fact Feature:** Implemented the `getFunFact` function to fetch and display a fun fact about a given number from Numbers API. The fact is shown in `funFactLbl`, and if the number is not found, a default message is shown.
 - **Error Handling Improvement:** Enhanced error handling within the `getFunFact` function to display a user-friendly message when the fetch operation encounters an error.
 - **Dynamic Content Update:** Updated the `funFactLbl` to dynamically display fetched content, ensuring it only appears when valid data is retrieved.
+
+
+### v1.3 (*06-03-2025*)
+
+- **Improved Fun Fact Processing:** 
+  - Updated `getFunFact` function to use direct fetch instead of CORS proxy, improving reliability and removing dependency on external proxy service
+  - Added response cleaning with regex to remove number prefix from API responses
+  - Implemented filtering of uninteresting facts using `notAfactResponses` array, displaying a custom message for boring numbers
+  - Made the function async/await consistent with modern JavaScript practices
+
+- **Enhanced Error Handling:**
+  - Simplified error handling in `getFunFact` with try/catch block
+  - Removed unnecessary proxy-related complexity
+  - Improved error logging with console.error for better debugging
+
+- **Content Display Optimization:**
+  - Added conditional display logic for fun facts, showing "No fun fact available" for unremarkable numbers
+  - Maintained dynamic visibility of `funFactLbl` with cleaner implementation
+  - Improved fact presentation by cleaning API response text
+
