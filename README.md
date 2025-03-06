@@ -20,11 +20,26 @@ This project generates random numbers on mouse hover over a label, with a transi
 
 You can view a live demo of the project [here](https://abdelhakim-sahifa.github.io/random-number/).
 
-## Updates in Code (*08-07-2024*)
+## Updates in Code (*06-03-2025*)
 
-- **Added Fun Fact Feature:** Implemented the `getFunFact` function to fetch and display a fun fact about a given number from Numbers API. The fact is shown in `funFactLbl`, and if the number is not found, a default message is shown.
-- **Error Handling Improvement:** Enhanced error handling within the `getFunFact` function to display a user-friendly message when the fetch operation encounters an error.
-- **Dynamic Content Update:** Updated the `funFactLbl` to dynamically display fetched content, ensuring it only appears when valid data is retrieved.
+
+- **Improved Fun Fact Processing:** 
+  - Updated `getFunFact` function to use direct fetch instead of CORS proxy, improving reliability and removing dependency on external proxy service
+  - Added response cleaning with regex to remove number prefix from API responses
+  - Implemented filtering of uninteresting facts using `notAfactResponses` array, displaying a custom message for boring numbers
+  - Made the function async/await consistent with modern JavaScript practices
+
+- **Enhanced Error Handling:**
+  - Simplified error handling in `getFunFact` with try/catch block
+  - Removed unnecessary proxy-related complexity
+  - Improved error logging with console.error for better debugging
+
+- **Content Display Optimization:**
+  - Added conditional display logic for fun facts, showing "No fun fact available" for unremarkable numbers
+  - Maintained dynamic visibility of `funFactLbl` with cleaner implementation
+  - Improved fact presentation by cleaning API response text
+
+
 
 ## Features
 
