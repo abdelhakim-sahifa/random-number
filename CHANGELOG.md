@@ -31,3 +31,21 @@
   - Maintained dynamic visibility of `funFactLbl` with cleaner implementation
   - Improved fact presentation by cleaning API response text
 
+### v1.4 (*12-03-2025*)  
+
+- **Switched to Custom API:**  
+  - Replaced `numbersapi.com` with `numfunfacts.vercel.app`, a custom API powered by Gemini AI for better fact generation.  
+  - Removed reliance on external number fact sources, improving control and customization.  
+
+- **Simplified Response Handling:**  
+  - Directly extracts `fact` from JSON response instead of parsing raw text.  
+  - Eliminated unnecessary regex cleaning since the custom API provides clean responses.  
+  - Removed filtering of "uninteresting" facts, allowing API to handle relevant fact selection.  
+
+- **Improved Error Handling & Logging:**   
+  - Ensured proper error messaging when the API request fails.  
+  - Used `if (funFactLbl)` checks to prevent errors if the element is missing.  
+
+- **Code Optimization:**  
+  - Ensured consistent use of `async/await` practices.  
+  - Removed redundant condition checks and unnecessary fallback logic.
