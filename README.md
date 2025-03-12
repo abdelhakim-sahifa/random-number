@@ -20,26 +20,25 @@ This project generates random numbers on mouse hover over a label, with a transi
 
 You can view a live demo of the project [here](https://abdelhakim-sahifa.github.io/random-number/).
 
-## Updates in Code (*06-03-2025*)
+## Updates in Code (*12-03-2025*)
 
 
-- **Improved Fun Fact Processing:** 
-  - Updated `getFunFact` function to use direct fetch instead of CORS proxy, improving reliability and removing dependency on external proxy service
-  - Added response cleaning with regex to remove number prefix from API responses
-  - Implemented filtering of uninteresting facts using `notAfactResponses` array, displaying a custom message for boring numbers
-  - Made the function async/await consistent with modern JavaScript practices
+- **Switched to Custom API:**  
+  - Replaced `numbersapi.com` with `numfunfacts.vercel.app`, a custom API powered by Gemini AI for better fact generation.  
+  - Removed reliance on external number fact sources, improving control and customization.  
 
-- **Enhanced Error Handling:**
-  - Simplified error handling in `getFunFact` with try/catch block
-  - Removed unnecessary proxy-related complexity
-  - Improved error logging with console.error for better debugging
+- **Simplified Response Handling:**  
+  - Directly extracts `fact` from JSON response instead of parsing raw text.  
+  - Eliminated unnecessary regex cleaning since the custom API provides clean responses.  
+  - Removed filtering of "uninteresting" facts, allowing API to handle relevant fact selection.  
 
-- **Content Display Optimization:**
-  - Added conditional display logic for fun facts, showing "No fun fact available" for unremarkable numbers
-  - Maintained dynamic visibility of `funFactLbl` with cleaner implementation
-  - Improved fact presentation by cleaning API response text
+- **Improved Error Handling & Logging:**   
+  - Ensured proper error messaging when the API request fails.  
+  - Used `if (funFactLbl)` checks to prevent errors if the element is missing.  
 
-
+- **Code Optimization:**  
+  - Ensured consistent use of `async/await` practices.  
+  - Removed redundant condition checks and unnecessary fallback logic.
 
 ## Features
 
