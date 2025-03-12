@@ -12,6 +12,8 @@ if(isdark){
     modeToggle.classList.add('dark-mode-toggle');
     modeToggle.classList.add('fa-sun');
     label.style.border = 'solid 1px white';
+    document.querySelector('footer').style.backgroundColor = "#121212" ;
+    document.getElementById('history').style.backgroundColor = "#121212" ; 
 }
 
 
@@ -36,6 +38,10 @@ modeToggle.addEventListener('click' , () => {
         label.style.border = 'solid 1px white';
         historyDiv.style.border = 'solid 1px white';
         localStorage.setItem('isDark', true);
+         document.querySelector('footer').style.backgroundColor = "#121212" ;
+       document.getElementById('history').style.backgroundColor = "#121212" ; 
+
+
     }
     else{
         document.body.classList.remove('dark-body');
@@ -45,6 +51,10 @@ modeToggle.addEventListener('click' , () => {
         label.style.border = 'solid 1px black';
         historyDiv.style.border = 'solid 1px black';
         localStorage.removeItem('isDark');
+    document.querySelector('footer').style.backgroundColor = "white"
+    document.getElementById('history').style.backgroundColor = "white" ; 
+
+
     }
 })
 
