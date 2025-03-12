@@ -149,31 +149,28 @@ const notAfactResponses = [
 
 async function getFunFact(number) {
     try {
-        let url = `http://numbersapi.com/${number}`;
+        let url = `https://numfunfacts.vercel.app/fact/${number}`;
         let response = await fetch(url);
 
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
         }
 
-        let text = await response.text();
+        let res = await response.json(); // Properly declare `res`
         
-        // Remove the number from the response using regex
-        let cleanedText = text.replace(/^\d+\s*/, "").trim();
+        console.log(res.fact); // Log the actual fact
 
-        if (notAfactResponses.includes(cleanedText)) {
+        if (funFactLbl) { // Ensure the element exists
             funFactLbl.style.display = 'flex';
-
-            funFactLbl.textContent = `No fun fact available for ${number}. `;
-        } else {
-            funFactLbl.style.display = 'flex';
-            funFactLbl.textContent = text;
+            funFactLbl.textContent = res.fact; // Set the correct fact
         }
+        
     } catch (error) {
         console.error('Error fetching the fact:', error);
-        funFactLbl.textContent = 'Error fetching the fact.';
+        if (funFactLbl) funFactLbl.textContent = 'Error fetching the fact.';
     }
 }
+
 
 
 function copyToClipboard(text) {
