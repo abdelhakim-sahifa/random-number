@@ -140,12 +140,7 @@ function refreshHistory(listOfHistory){
 
 
 }
-const notAfactResponses = [
-    "is an unremarkable number.",
-    "is an uninteresting number.",
-    "is a boring number.",
-    "is a number for which we're missing a fact (submit one to numbersapi at google mail!)."
-];
+
 
 async function getFunFact(number) {
     try {
@@ -158,7 +153,6 @@ async function getFunFact(number) {
 
         let res = await response.json(); // Properly declare `res`
         
-        console.log(res.fact); // Log the actual fact
 
         if (funFactLbl) { // Ensure the element exists
             funFactLbl.style.display = 'flex';
