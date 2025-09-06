@@ -12,7 +12,6 @@
 - **Error Handling Improvement:** Enhanced error handling within the `getFunFact` function to display a user-friendly message when the fetch operation encounters an error.
 - **Dynamic Content Update:** Updated the `funFactLbl` to dynamically display fetched content, ensuring it only appears when valid data is retrieved.
 
-
 ### v1.3 (*06-03-2025*)
 
 - **Improved Fun Fact Processing:** 
@@ -49,3 +48,40 @@
 - **Code Optimization:**  
   - Ensured consistent use of `async/await` practices.  
   - Removed redundant condition checks and unnecessary fallback logic.
+
+### v2.0 (*06-09-2025*)
+
+- **Complete Code Architecture Overhaul:**
+  - Rewrote entire codebase using modern ES6 class-based architecture (`RandomNumberApp` class)
+  - Implemented proper separation of concerns with dedicated methods for each functionality
+  - Enhanced code maintainability and readability with object-oriented design patterns
+
+- **Advanced User Controls:**
+  - **Custom Range Selection:** Added user-configurable min/max range inputs instead of fixed preset ranges
+  - **Range Validation:** Automatic validation prevents invalid range configurations
+  - **Real-time Stats:** Display current range and total generation count with persistent tracking
+
+- **Enhanced History Management:**
+  - **Extended History:** Increased history capacity from 3 to 5 items
+  - **Clickable History:** History items now clickable for instant copying to clipboard
+  - **Duplicate Prevention:** Smart filtering prevents duplicate entries in history
+  - **Clear History:** Added dedicated button to reset all history and statistics
+
+- **Improved User Experience:**
+  - **Multiple Triggers:** Generate numbers via hover, click, or spacebar key press
+  - **Better Animations:** Increased animation duration (15 frames) for more engaging visual feedback
+  - **Responsive Design:** Added comprehensive mobile-responsive breakpoints and layouts
+  - **Enhanced Accessibility:** Better keyboard navigation and screen reader support
+
+- **Robust Technical Improvements:**
+  - **Advanced Clipboard:** Multiple fallback methods for reliable copying across all browsers and contexts
+  - **API Optimization:** Added request timeout (5s) and proper error handling for fun fact API calls
+  - **Leading Zero Handling:** Smart processing removes unnecessary leading zeros for API calls while preserving display formatting
+  - **Memory Optimization:** Eliminated redundant DOM queries and improved event handling efficiency
+  - **Generation Tracking:** Persistent counter tracks total numbers generated across sessions
+
+- **Code Quality Enhancements:**
+  - **Error Resilience:** Comprehensive try/catch blocks with graceful degradation
+  - **Performance Optimization:** Reduced unnecessary operations and improved rendering efficiency  
+  - **Modern JavaScript:** Full ES6+ syntax with proper async/await patterns throughout
+  - **Clean Architecture:** Modular design with clear separation of initialization, state management, and user interactions

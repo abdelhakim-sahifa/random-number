@@ -153,8 +153,10 @@ function refreshHistory(listOfHistory){
 
 
 async function getFunFact(number) {
+    // Remove leading zeros for API call
+    const numberForAPI = parseInt(number).toString();
     try {
-        let url = `https://numfunfacts.vercel.app/fact/${number}`;
+        let url = `https://numfunfacts.vercel.app/fact/${numberForAPI}`;
         let response = await fetch(url);
 
         if (!response.ok) {

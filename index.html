@@ -6,44 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>the random number !</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" />
     <link rel="icon" type="image/png" href="https://i.ibb.co/YLYx0Vz/image.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <header>
-       
-            <i class="far fa-moon" id="mode-toggle"></i>  
-            <div class="history" id="history">
-               
-                
-            </div>
-
+        <i class="far fa-moon" id="mode-toggle"></i>  
     </header>
 
+    <div class="controls">
+        <div class="range-controls">
+            <span>Range:</span>
+            <input type="number" id="minRange" value="0" min="0">
+            <span>to</span>
+            <input type="number" id="maxRange" value="9999" min="1">
+        </div>
+        <button class="clear-history" id="clearHistory">Clear History</button>
+    </div>
     
-    
-<div class="main">
-    <h1>the random number !</h1>
-    <label id="lbl">----</label>
-<span id="copyNotification">Copied to clipboard!</span>
+    <div class="main">
+        <h1>the random number !</h1>
+        <label id="lbl">----</label>
+        <span id="copyNotification">Copied to clipboard!</span>
+        <label id="funFactLbl"></label>
+        <div class="stats" id="stats"></div>
+    </div>
 
-<label id="funFactLbl"></label>
+    <div class="history" id="history"></div>
 
+    <footer>
+        <label>by Abdelhakim Sahifa</label>
+        <a href="https://github.com/abdelhakim-sahifa/random-number" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+    </footer>
 
-</div>
-<footer>
-    <label>by Abdelhakim Sahifa</label>
-    <a href="https://github.com/abdelhakim-sahifa/random-number" target="_blank" rel="noopener">
-        <i  class="fab fa-github"></i> GitHub
-    </a>
-    
- </footer>
-
-<script src="script.js"></script>
-
-
+    <script src="script.js"></script>
 </body>
 </html>
-

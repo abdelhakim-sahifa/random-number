@@ -1,32 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Honk&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: "Honk", system-ui;
-   
-    
 }
-*::selection{
+
+*::selection {
     background-color: black;
     color: white;
 }
-body{
+
+body {
     background-color: #fff;
     transition: background-color 0.5s, color 0.5s;
-
 }
 
-header{
+header {
     margin: 5px;
     position: fixed;
     top: 0;
-
 }
 
-
-
-#mode-toggle{
-   margin: 10px;
+#mode-toggle {
+    margin: 10px;
     border: none;
     border-radius: 15px;
     padding: 5px;
@@ -38,26 +35,67 @@ header{
     padding: 5px;
     position: fixed;
     bottom: 10px;
- 
-
 }
 
-#mode-toggle:hover{
+#mode-toggle:hover {
     background-color: #ebe9e8;
-
 }
 
+.controls {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
-.history::before{
+.range-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border: solid 1px black;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.range-controls input {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.clear-history {
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+  
+    font-size: 12px;
+    transition: all 0.3s;
+}
+
+.clear-history:hover {
+    background: rgb(20, 123, 219);
+
+    opacity: 0.8;
+}
+
+.history::before {
     content: 'history'; 
     font-size: 20px;
     border-right: solid 1px #e0a761;
     padding-right: 10px;
-    
 }
 
-
-.history{
+.history {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -70,29 +108,24 @@ header{
     margin: 10px;
     padding: 15px;
     transition: all .3s;
+    max-width: 300px;
+    overflow-x: auto;
 }
 
-
-
-.history label{
+.history label {
     font-size: 20px;
     position: relative;
-    transition:  all .3s ;
+    transition: all .3s;
     border-radius: 10px;
-    
+    cursor: pointer;
 }
 
-.history label:hover{
+.history label:hover {
     background-color: #0A84FF;
     padding: 5px;
-     
 }
 
-
-
-
-.main{
-
+.main {
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -101,38 +134,35 @@ header{
     align-items: center;
     justify-content: center;
     padding: 20px;
-
     border-radius: 20px;
-   
-
 }
-.main h1{
+
+.main h1 {
     font-size: 50px;
     width: 100%;
     text-align: center;
 }
 
-#lbl{
+#lbl {
     border: solid 1px black;
     padding: 10px;
     border-radius: 20px;
     text-align: center;
     justify-content: center;
-    font-size: 50px ;
-    
+    font-size: 50px;
     transition: all .3s;
-  
+    cursor: pointer;
+    user-select: all;
 }
-#lbl:hover{
-    
-    font-size: 100px  !important;
+
+#lbl:hover {
+    font-size: 100px !important;
     border-radius: 4px;
-
 }
 
-#funFactLbl{
+#funFactLbl {
     font-family: 'Poppins', sans-serif;
-     color: black;
+    color: black;
     justify-content: center;
     align-items: center;
     font-size: 16px !important;
@@ -143,51 +173,51 @@ header{
     border: solid 1px black;
     border-radius: 20px;
     margin: 10px;
-
+    display: none;
+    max-width: 600px;
 }
-#funFactLbl:hover{
+
+#funFactLbl:hover {
     background-color: black;
     border: solid 1px black;
     border-radius: 20px;
     padding: 10px;
     color: white;
-
 }
 
-
-
-
-
-
-
-
-
-.red{
+.red {
     background-color: #FF3B30FF;
 }
-.green{
+
+.green {
     background-color: #34C759FF;
 }
 
-
-#copyNotification{
-   display: none;
-    
+#copyNotification {
+    display: none;
     font-size: 20px;
+    color: #34C759FF;
+    font-family: 'Poppins', sans-serif;
 }
 
+.stats {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+}
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 100px auto;
     background-color: white;
-    transition:  .3s all ease;
-    
+    transition: .3s all ease;
 }
 
-footer label , a{
+footer label, a {
     font-family: "Poppins", sans-serif;
     color: rgb(112, 112, 112);
     text-align: center;
@@ -195,29 +225,76 @@ footer label , a{
     transition: all .3s;
 }
 
-a:hover{
+a:hover {
     color: #e0a761;
-
 }
 
-
-
-/*dark mode*/
-
-.dark-body{
+/* Dark mode styles */
+.dark-body {
     background-color: #121212;
 }
 
-.dark-mode-toggle{
+.dark-body .range-controls {
+    background: #121212;
+    border: solid 1px white;
     color: white;
 }
-.dark-mode-toggle:hover{
-    background-color: #393939 !important;
 
+.dark-body .range-controls input {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
 }
 
-.dark-label{
+.dark-mode-toggle {
+    color: white;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #393939 !important;
+}
+
+.dark-label {
     border: solid 1px white;
 }
 
-/*-------*/
+/* Responsive design */
+@media (max-width: 768px) {
+    .main {
+        width: 95%;
+        margin: 80px auto;
+    }
+    
+    .main h1 {
+        font-size: 35px;
+    }
+    
+    #lbl {
+        font-size: 35px;
+    }
+    
+    #lbl:hover {
+        font-size: 60px !important;
+    }
+    
+    .controls {
+        position: relative;
+        top: auto;
+        right: auto;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    
+    .range-controls {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .history {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin: 20px auto;
+        max-width: 90%;
+    }
+}
