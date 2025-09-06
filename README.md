@@ -48,7 +48,7 @@ You can view a live demo of the project [here](https://abdelhakim-sahifa.github.
 
 ## Recent Updates (*06-09-2025*)
 
-### v2.0 - Major Architecture Overhaul
+### v1.4 - Major Architecture Overhaul
 
 - **🏗️ Complete Code Restructure:**
   - Rewrote entire application using modern ES6 class-based architecture

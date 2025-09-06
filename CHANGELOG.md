@@ -49,7 +49,7 @@
   - Ensured consistent use of `async/await` practices.  
   - Removed redundant condition checks and unnecessary fallback logic.
 
-### v2.0 (*06-09-2025*)
+### v1.5 (*06-09-2025*) 
 
 - **Complete Code Architecture Overhaul:**
   - Rewrote entire codebase using modern ES6 class-based architecture (`RandomNumberApp` class)
